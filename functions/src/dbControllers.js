@@ -35,6 +35,7 @@ export async function getDocById(req, res) {
   }
 }
 
+
 // Post: Create Doc
 export async function createDoc(req, res) {
   try {
@@ -43,9 +44,24 @@ export async function createDoc(req, res) {
       .insertOne(req.body)
       
     console.table(collection);
-    res.status(201).json({ data: collection });    
+    res.status(201).json({ data: collection }); 
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "💩oopsy! An error occurred." }); 
+  }
+}
+
+// Delete: Doc by Id
+export async function deleteDoc(req, res) {
+  try {
+    const collection = await dbClient
+      .collection(collectionName)
+      .deleteOne({ _id: new ObjectId(req.params.id) });
+
+      console.table(collection);
+      res.status(200).json({ data: collection });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "💩oopsy! An error occurred." });
   }
 }
