@@ -1,10 +1,10 @@
 functions/node_modules
-.DS_Store
 functions/.env
+.DS_Store
+
 
 
 # Logs
-.DS_Store
 logs
 *.log
 npm-debug.log*
