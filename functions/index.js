@@ -1,7 +1,7 @@
 import functions from "firebase-functions";
 import express from 'express'; 
 import cors from 'cors';
-import { getAllDocs } from './src/dbControllers.js';  
+import { getAllDocs, createDoc } from './src/dbControllers.js';  
 
 const app = express();
 app.use(express.json());
@@ -10,7 +10,7 @@ const rootUri = process.cwd();
 
 /* API */
 app.get("/api/plants", getAllDocs);
-// app.post("/api/plants", createDoc);
+app.post("/api/plants", createDoc);
 // app.get("/api/plants/:id", getDocById);
 // app.put("/api/plants/:id", updateDoc);
 // app.delete("/api/plants/:id", deleteDoc);
