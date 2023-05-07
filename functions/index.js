@@ -1,7 +1,8 @@
 import functions from "firebase-functions";
 import express from 'express'; 
 import cors from 'cors';
-import { getAllDocs, getDocById, createDoc, deleteDoc, updateDoc } from './src/dbControllers.js';  
+import { getAllDocs, getDocById, createDoc, deleteDoc, updateDoc } from './src/plants/dbControllers.js';  
+import { getRedirect } from './src/mozartsGhost/index.js';
 
 const app = express();
 app.use(express.json());
@@ -15,6 +16,8 @@ app.post("/api/plants", createDoc);
 app.delete("/api/plants/:id", deleteDoc);
 app.patch("/api/plants/:id", updateDoc);
 
+/* Mozart's Ghost */
+app.get("/mozartsghost/:id", getRedirect);
 
 /* Root */
 app.get("/", (req,res) => {
