@@ -14,13 +14,30 @@ const links = [
 ];
 
 export function getRedirect(req, res) {
-  const id = parseInt(req.params.id);
+  const id = req.params.id;
 
-  if (!id || id < 0 || id > links.length) { 
-    const redirectLink = links[0]; 
+  // Check for the valiity of the id
+  /* One liner: const isValidId = id => typeof id === "number" && id >= 0 && id < links.length; */
+  const isValidId = (id) => { 
+    typeof id === "number" && id >= 0 && id < links.length;
+  };
+  
+  let redirectLink;
+
+  switch (id) {
+    case "r":
+      redirectLink = links[Math.floor(Math.random() * links.length)];
+      break;
+
+    default:
+      if (!isValidId(id)) {
+        redirectLink = links[0];
+      } else {
+        redirectLink = links[id];
+      }
+      break;
   }
 
-  const redirectLink = links[id];
-
+  // Redirect to the link
   res.status(200).redirect(redirectLink);
 }
