@@ -32,14 +32,12 @@ export function getRedirect(req, res) {
       break;
 
     default:
-      (isValidId(id))
+      isValidId(id)
         ? redirectLink = links[id]
         : redirectLink = links[0];
       break;
   }
 
-  
-
   // Redirect to the link
-  // res.status(200).redirect(redirectLink);
+  res.status(200).redirect(redirectLink);
 }
