@@ -2,8 +2,7 @@ import { getDbClient } from "./dbClient.js";
 import { ObjectId } from "mongodb";
 
 const { dbClient, collectionName } = await getDbClient();
-const errMessage = { message: "💩oopsy! An error occurred." }
-
+const errMessage = { message: "💩oopsy! An error occurred." };
 
 // Get: All Docs
 /* *********************** */
@@ -17,7 +16,7 @@ export async function getAllDocs(req, res) {
     .catch(err => res.status(500).json(errMessage));
   
   console.table(collection);
-  res.status(200).json({ data: collection });
+  res.status(200).json(collection);
 }
 
 
