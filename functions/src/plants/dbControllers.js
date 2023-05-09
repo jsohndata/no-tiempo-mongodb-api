@@ -7,10 +7,20 @@ const errMessage = { message: "💩oopsy! An error occurred." };
 // Get: All Docs
 /* *********************** */
 export async function getAllDocs(req, res) {
+  const sort = req.query.sort || "_id";
+
+  // Check if the sort order is asc or desc
+  const sortOrder = sort.startsWith("-") 
+    ? -1 
+    : 1; 
+  
+  // Remove the "-" sign from the sort param to get the field to sort by
+  const sortBy = sort.slice(1);     
      
   const collection = await dbClient
     .collection(collectionName)
     .find({})
+    .sort({ [sortBy]: sortOrder })
     .limit(10)
     .toArray()
     .catch(err => res.status(500).json(errMessage));
