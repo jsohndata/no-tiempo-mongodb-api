@@ -30,7 +30,7 @@ export async function getAllDocs(req, res) {
 }
 
 
-// Get: Dic by Id
+// Get: Doc by Id
 /* *********************** */
 export async function getDocById(req, res) {
   const docId = new ObjectId(req.params.id);
