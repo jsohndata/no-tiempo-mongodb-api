@@ -20,7 +20,7 @@ export async function getAllDocs(req, res) {
   const collection = await dbClient
     .collection(collectionName)
     .find({})
-    .sort({ [sortBy]: sortOrder })
+    .sort( {[sortBy]: sortOrder} )
     .limit(10)
     .toArray()
     .catch(err => res.status(500).json(errMessage));
@@ -37,8 +37,29 @@ export async function getDocById(req, res) {
 
   const collection = await dbClient
     .collection(collectionName)
-    .findOne({ _id: docId })
+    .findOne( {_id: docId} )
     .catch(err => res.status(500).json(errMessage));
+  
+  console.table(collection);
+  res.status(200).json( {data: collection} );
+}
+
+
+// Get: Doc by Filter
+/* *********************** */
+export async function getDocByFilter(req, res) {
+  const {filterType} = req.params;
+  const {filterValue} = req.params;
+
+  console.log("=======>", filterType);
+  console.log("=======>", filterValue);
+
+  const collection = await dbClient
+    .collection(collectionName)
+    .find( {[filterType] : filterValue} )
+    .toArray()
+    .catch(err => res.status(500).json(errMessage));
+
   
   console.table(collection);
   res.status(200).json({ data: collection });

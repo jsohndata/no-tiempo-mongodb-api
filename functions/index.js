@@ -1,7 +1,7 @@
 import functions from "firebase-functions";
 import express from 'express'; 
 import cors from 'cors';
-import { getAllDocs, getDocById, createDoc, deleteDoc, updateDoc } from './src/plants/dbControllers.js';  
+import { getAllDocs, getDocById, getDocByFilter, createDoc, deleteDoc, updateDoc } from './src/plants/dbControllers.js';  
 import { getRedirect } from './src/mozartsGhost/index.js';
 
 const app = express();
@@ -12,6 +12,7 @@ const rootUri = process.cwd();
 /* API */
 app.get("/api/plants", getAllDocs);
 app.get("/api/plants/:id", getDocById);
+app.get("/api/plants/filter/:filterType/:filterValue", getDocByFilter);
 app.post("/api/plants", createDoc);
 app.delete("/api/plants/:id", deleteDoc);
 app.patch("/api/plants/:id", updateDoc);
