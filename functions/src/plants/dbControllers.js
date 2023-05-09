@@ -61,7 +61,7 @@ export async function getDocByFilter(req, res) {
     .catch(err => res.status(500).json(errMessage));
 
   
-  console.table(collection);
+  console.table({collection});
   res.status(200).json({ data: collection });
 }
 
@@ -76,7 +76,7 @@ export async function createDoc(req, res) {
     .insertOne(docContent)
     .catch(err => res.status(500).json(errMessage));
   
-    console.table(collection);
+    console.table({collection});
     res.status(200).json({ data: collection });
 }
 
@@ -92,7 +92,7 @@ export async function deleteDoc(req, res) {
       { _id: docId })
     .catch(err => res.status(500).json(errMessage));
     
-    console.table(collection);
+    console.table({collection});
     res.status(200).json({ data: collection });
 }
 
@@ -110,6 +110,6 @@ export async function updateDoc(req, res) {
       { $set: docContent })
     .catch(err => res.status(500).json(errMessage));
   
-    console.table(collection);
+    console.table({collection});
     res.status(200).json({ data: collection });
 }
