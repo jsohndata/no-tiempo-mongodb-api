@@ -86,10 +86,12 @@ a {
 main p {
   font-size: clamp(1.8rem, 5vw, 2.2rem);
   color: rgba(169, 255, 244, 0.9);
+  line-height: 1.2em;
 }
 
 main ul {
   width: 85%;
+  margin-top: 6%;
 }
 
 main li {
