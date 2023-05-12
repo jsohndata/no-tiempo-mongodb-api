@@ -4,13 +4,15 @@ body {
     font-family: 'Red Hat Mono', monospace;
     margin: 0;
     padding: 0; 
-    background-color: rgba(44, 16, 77, 0.608);
+    background-color: rgba(8, 0, 16, 0.559);
+    background-image: url("/images/bg1.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-blend-mode: color;
-    animation: change-bg 80s ease-in-out 1.3s  normal infinite;
+    animation: change-bg 90s ease-in-out 1.3s  normal infinite;
+    transition: all 0.5s ease-in-out;
   }
 
 @keyframes change-bg {
@@ -38,8 +40,12 @@ body {
     background-image: url("/images/bg6.webp");
   }
 
-  100% {
+  90% {
     background-image: url("/images/bg7.webp");
+  }
+
+  100% {
+    background-image: url("/images/bg1.webp");
   }
 }
 
