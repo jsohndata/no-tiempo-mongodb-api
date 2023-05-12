@@ -10,7 +10,11 @@ const links = [
   /* 07 */ "https://jsohndata.github.io/magic-color-xxl/",
   /* 08 */ "https://jsohndata.github.io/cogito-ergo-sum/",
   /* 09 */ "https://jsohndata.com",
-  /* 10 */ "https://jsohndata.github.io/synthational/"
+  /* 10 */ "https://jsohndata.github.io/synthational/",
+  /* 11 */ "https://notiempo.lol",
+
+  /* 12 */ "https://jsohndata.github.io/terra-mater-css-animation/",
+  
 ];
 
 export function getRedirect(req, res) {
