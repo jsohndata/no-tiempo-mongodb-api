@@ -46,6 +46,10 @@ body {
     background-image: url("/images/bg7.webp");
   }  
 
+  80% {
+    background-image: url("/images/bg8.webp");
+  }    
+
   100% {
     background-image: url("/images/bg1.webp");
   }
