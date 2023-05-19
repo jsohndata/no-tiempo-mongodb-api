@@ -70,7 +70,7 @@ main li {
 
 h1 {
   font-family: 'Megrim', cursive;
-  font-size: clamp(4.0rem, 6vw, 7.5rem);
+  font-size: clamp(2.6rem, 6vw, 7.5rem);
   font-weight: 900;
   color: white;
 }
@@ -88,7 +88,7 @@ a {
 }
 
 main p {
-  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  font-size: clamp(1.3rem, 5vw, 2.2rem);
   color: rgba(169, 255, 244, 0.9);
   line-height: 1.2em;
 }
@@ -99,7 +99,7 @@ main ul {
 }
 
 main li {
-  font-size: clamp(1.0rem, 5vw, 1.3rem);
+  font-size: clamp(0.8rem, 4vw, 1.3rem);
   color: rgba(240, 243, 227, 0.9);
   font-weight: 400;  
   line-height: 1.3;  

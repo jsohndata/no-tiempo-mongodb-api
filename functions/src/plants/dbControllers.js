@@ -86,7 +86,7 @@ export async function createDoc(req, res) {
     .catch(err => res.status(500).json(errMessage));
   
     console.table( {collection} );
-    res.status(200).json(collection);
+    res.status(201).json(collection);
   }
 
 
