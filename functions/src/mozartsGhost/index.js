@@ -1,6 +1,6 @@
 const links = [
   /* 00 */ "https://www.youtube.com/watch?v=hoWEYBSlctc", // mozart's ghost
-  /* 01 */ "https://www.youtube.com/watch?v=9E6b3swbnWg", // random
+  /* 01 */ "https://github.com/jsohndata", // random
   
   /* 02 */ "https://assenfuego.com/", 
   /* 03 */ "https://jsohndata.github.io/bluenight-in-seoul/",
@@ -12,8 +12,8 @@ const links = [
   /* 09 */ "https://jsohndata.com",
   /* 10 */ "https://jsohndata.github.io/synthational/",
   /* 11 */ "https://notiempo.lol",
-
   /* 12 */ "https://jsohndata.github.io/terra-mater-css-animation/",
+  /* 13 */ "https://jsohndata.github.io/late-night-background-jam/#/page3"
   
 ];
 
@@ -38,10 +38,10 @@ export function getRedirect(req, res) {
     default:
       isValidId(id)
         // if id equals end of the array, redirect to the first link--in this case 2.
-        ? id == links.length
+        ? (id == links.length)
             ? redirectLink = links[2]
             : redirectLink = links[id]
-        : redirectLink = links[0];
+        : (redirectLink = links[0]);
       break;
   }
 
