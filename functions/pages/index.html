@@ -45,21 +45,37 @@
 
 <body>
   <main class="container-fluid">
-    <div class="row d-flex justify-content-center">
-      <div class="col-xs-12 col-md-8 col-lg-7 col-xl-6
-        mt-5
-        column p-5">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-xs-12 col-md-8 col-lg-7 col-xl-6 column p-5"
+        style="margin-top: 10%;">
         <h1>No Tiempo <span class="api">API</span></h1>
-        <p>Time flies, but with this API, it's a smooth cerebral ride.</p>
-        <ul>
-          <li><strong>Mozart's Ghost</strong>: Redirects users based on a <a href="https://notiempo.lol/mozartsghost/10" target="newwin">parameter ID</a>, or `r` for <a href="https://notiempo.lol/mozartsghost/r" target="newwin">random</a>. <a href="https://github.com/jsohndata/docs-recipes/tree/main/express-redirect" target="_blank">GitHub</a>.</li>
+        <p>Time flies, but with this API, it's a smooth cerebral ride. 
+          <a 
+            data-bs-toggle="collapse" 
+            data-bs-target="#collapseOne" 
+            aria-expanded="true" 
+            aria-controls="collapseOne"
+              style="text-decoration: none;">🍄</a></p>
 
-          <li><strong>MongoDB Restful-API</strong>: Class project with Cohort-10. Full CRUD or no CRUD--period! <a href="https://jsohndata.github.io/no-tiempo-mongodb-prototype/" target="_blank">Prototype</a>.</li>
+        <div class="accordion" id="accordion-parent">
 
-          <li><strong>C-10 Sample Work</strong>: See some of their work.</li>
+          <div id="collapseOne" 
+            class="accordion-collapse collapse hide" 
+            aria-labelledby="headingOne" 
+            data-bs-parent="#accordion-parent">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Mozart's Ghost</strong>: Redirects users based on a <a href="https://notiempo.lol/mozartsghost/10" target="newwin">parameter ID</a>, or `r` for <a href="https://notiempo.lol/mozartsghost/r" target="newwin">random</a>. <a href="https://github.com/jsohndata/docs-recipes/tree/main/express-redirect" target="_blank">GitHub</a>.</li>
 
-          <li><strong>Vibes</strong>: Musics that got me going at 0400. <a href="https://open.spotify.com/playlist/6KndJBKPQXVOUF4pnrfXyV?si=91caa34c1ceb4bcc" target="_blank">Spotify</a></li>
-        </ul>
+              <li><strong>MongoDB Restful-API</strong>: Class project with Cohort-10. Full CRUD or no CRUD--period! <a href="https://jsohndata.github.io/no-tiempo-mongodb-prototype/" target="_blank">Prototype</a>.</li>
+
+              <li><strong>C-10 Sample Work</strong>: See some of their work.</li>
+
+              <li><strong>Vibes</strong>: Musics that got me going at 0400. <a href="https://open.spotify.com/playlist/6KndJBKPQXVOUF4pnrfXyV?si=91caa34c1ceb4bcc" target="_blank">Spotify</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
