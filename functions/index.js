@@ -29,4 +29,4 @@ app.get("*", (req,res) => {
   res.status(404).sendFile( rootUri + '/pages/404.html' );
 });
 
-export const api = functions.https.onRequest( app );
+export const api = functions.https.onRequest(app);
