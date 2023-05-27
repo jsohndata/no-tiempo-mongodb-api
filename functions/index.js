@@ -20,12 +20,11 @@ app.patch("/api/plants/:id", updateDoc);
 /* Mozart's Ghost */
 app.get("/mozartsghost/:id", getRedirect);
 
-/* Root */
+/* Root and 404 */
 app.get("/", (req,res) => {
   res.status(200).sendFile( rootUri + '/pages/index.html' );
 });
 
-/* 404 */
 app.get("*", (req,res) => {
   res.status(404).sendFile( rootUri + '/pages/404.html' );
 });
