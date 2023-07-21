@@ -13,7 +13,11 @@ const links = [
   /* 10 */ "https://jsohndata.github.io/synthational/",
   /* 11 */ "https://notiempo.lol",
   /* 12 */ "https://jsohndata.github.io/terra-mater-css-animation/",
-  /* 13 */ "https://jsohndata.github.io/late-night-background-jam/#/page3"
+  /* 13 */ "https://jsohndata.github.io/late-night-background-jam/#/page3",
+
+  /* 14 */ "https://jsohndata.github.io/bocacode-c10-final-project-portfolio/",
+  /* 15 */ "https://jsohndata.github.io/star-music/",
+  /* 16 */ "https://jsohndata.github.io/who-what-where-quiz-app/",
   
 ];
 
