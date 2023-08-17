@@ -17,7 +17,6 @@ In the footer
 
 .css
 ```
-
 #mozarts-ghost {
   position: fixed;
   opacity: 1;
